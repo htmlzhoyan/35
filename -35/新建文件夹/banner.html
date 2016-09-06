@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lubo</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript">
+$(function() {
+				
+				var clearTime = null; 
+				var $index = 0;
+				var $qiandex = 0; 
+				function scrollPlay() {
+		
+					$(".infcp_baniu li").eq($index).addClass("changebg").siblings().removeClass("changebg");
+					if ($index == 0 && $qiandex == 4) {/** 第一张图片 **/
+						/*****************************************
+						【特殊处理：】主要是处理当前显示的最后一张图片
+						点击下一张图片链接
+						要动画【从左向右】展示第一张图片的动画效果
+						*****************************************/
+						/*
+						这是隐藏前一张图片的动画：
+						前一张图片，从当前位置，通过动画效果移动到left:-820的位置
+						超出包含图片的div就会隐藏。
+						*/
+						$(".container img").eq($qiandex).stop(true, true).animate({
+							"left": "-700px"
+						});
+						/*
+						这是显示当前图片的动画：
+						首先将图片绝对定位到left:700px位置，就是包含图片div的右方
+						然后让图片运动到指定的left:0的位置，展现出图片进入的效果
+						*/
+						$(".container img").eq($index).css("left", "700px").stop(true, true).animate({
+							"left": "0"
+						});
+					}else if($index == 4 && $qiandex == 0) {/** 最后一张图片 **/
+						/****************************************
+						【特殊处理：】主要是处理当前显示第一张图片；
+						点击上一张图片链接
+						要动画【从右向左】展示最后一张图片的动画效果
+						****************************************/
+						$(".container img").eq($qiandex).stop(true, true).animate({
+							"left": "700px"
+						});
+						$(".container img").eq($index).css("left", "-700px").stop(true, true).animate({
+							"left": "0"
+						});
+					} else if ($index > $qiandex) { //左移
+						/**************
+						正常情况下
+
+						顺序显示图片；
+						1.包括点击了下一张链接.next
+						2.用户鼠标挪动到了后面图片的span上时
+
+						向左隐藏前一张图片,前一张图片动画【从右向左】到left:-820px;
+						当前图片先绝对定位到div右边left:820px，然后动画【从右向左】到left:0
+						**************/
+						$(".container img").eq($qiandex).stop(true, true).animate({
+							"left": "-700px"
+						});
+						$(".container img").eq($index).css("left", "700px").stop(true, true).animate({
+							"left": "0"
+						});
+					} else if ($index < $qiandex) { //右移
+						/**************
+						其他情况下
+
+						倒序显示图片
+						1. 用户点击了前一张图片链接.prev时
+						2. 用户鼠标挪动到了前面图片的span上时
+
+						向右隐藏前一张图片,前一张图片动画【从左向右】到left:820px隐藏;
+						当前图片先绝对定位到div左边left:-820px，然后动画【从左向右】到left:0
+						**************/
+						$(".container img").eq($qiandex).stop(true, true).animate({
+							"left": "700px"
+						});
+						$(".container img").eq($index).css("left", "-700px").stop(true, true).animate({
+							"left": "0"
+						});
+					}
+				}
+					
+				/*********************************************
+				 3. 设置自动播放效果：图片循环播放
+				*********************************************/
+				function autoPlay() {
+					// 使用setInterval(fn, timeout)函数进行间隔调用
+					clearTime = setInterval(function() {
+						$index++;// 默认当前索引自增1，播放下一张图片
+						if ($index > 3) {// 如果已经是最后一张图片
+							$index = 0;// 重新设置要播放的图片索引为第一张图片$index=0
+							$qiandex = 3;// 重新设置上一张图片索引为最后一张图片$qiandex=4
+						}
+						// 调用函数执行图片滚动动画
+						scrollPlay();
+						// 更新索引，将当前图片索引值，赋值给上一张图片索引值
+						$qiandex = $index;
+					}, 2000);
+					
+				}
+				// 开始自动播放
+				autoPlay();
+				
+				/***********************************************
+					6.悬停展示动画效果
+				***********************************************/
+				$(".infcp_baniu li").mouseover(function() {
+					clearInterval(clearTime);// 
+					$index = $(this).index(); //获取当前【小圆点】序列号
+					scrollPlay();
+					$qiandex = $index; //把当前的值赋给下一次的前一个序列号
+				}).mouseout(function(){
+					autoPlay();// 鼠标移出时自动播放
+				});
+			});
+	</script>
+	<style type="text/css">
+		*{margin: 0;padding: 0}
+		ul{list-style: none;}
+		.container{position: relative;margin:20px auto 0;width: 700px;height: 243px;overflow: hidden;}
+		.container>img{width:100%;height: 243px;position: absolute;left:700px;}
+		.container>img.active{left:0;}
+		.container>.infcp_baniu{width:168px;height: 5px;position: absolute;left:313px;bottom: 12px }
+		.container>.infcp_baniu li{width:40px;height: 5px;display: block;background: #666;margin-right: 2px;float: left}
+		.container>.infcp_baniu>.changebg{background: #90C221;}
+	</style>
+</head>
+<body>
+<div class="container">
+	<img class="active" src="img/5f_banner.jpg">
+	<img src="img/5f_banner1.jpg">
+	<img src="img/5f_banner3.jpg">
+	<img src="img/5fbanner.jpg">
+	
+	<ul class="infcp_baniu">
+	<li class="changebg"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+			
+	</ul>
+
+</body>
+</html>

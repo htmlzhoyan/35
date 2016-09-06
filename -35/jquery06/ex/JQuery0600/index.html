@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+		<!--<script type="text/javascript" src="js/minigrid.js" ></script>-->
+		<script type="text/javascript" src="js/minigrid.min305.js" ></script>
+		<script>
+			$(function () {
+				$(window).on("load", function() {
+					/*minigrid('.container', '.box');*/
+					
+					/*var props = {
+						container:'.container', // 设置父级容器
+						item:'.box', // 设置子容器
+						gutter:6   // 设置子容器间隔
+					};
+					var grid = new Minigrid(props);// 创建Minigrid对象
+					grid.mount();// 调用瀑布流方法完成效果*/
+
+				});
+				
+				/*$(window).on("resize", function() {
+					var props = {
+						container:'.container', // 设置父级容器
+						item:'.box', // 设置子容器
+						gutter:6   // 设置子容器间隔
+					};
+					var grid = new Minigrid(props);// 创建Minigrid对象
+					grid.mount();// 调用瀑布流方法完成效果
+				})*/
+			});
+		</script>
+		<style>
+			.container{position:relative;}
+			.box{padding:5px;float:left;}
+			/*.item{padding:5px;border:#ccc solid 1px; border-radius: 5px;box-shadow: 5px 5px 5px 0 #ccc;}*/
+			img{width:180px;height:auto;}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/1.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/2.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/3.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/4.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/5.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/6.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/7.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/8.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/9.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/10.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="item">
+					<img src="img/1.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/2.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/3.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/4.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/5.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/6.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/7.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/8.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/9.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/10.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="item">
+					<img src="img/1.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/2.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/3.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/4.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/5.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/6.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/7.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/8.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/9.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/10.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="item">
+					<img src="img/1.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/2.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/3.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/4.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/5.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/6.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/7.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/8.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/9.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/10.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="item">
+					<img src="img/1.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/2.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/3.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/4.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/5.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/6.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/7.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/8.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/9.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/10.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="item">
+					<img src="img/1.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/2.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/3.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/4.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/5.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/6.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/7.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/8.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/9.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/10.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="item">
+					<img src="img/1.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/2.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/3.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/4.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/5.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/6.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/7.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/8.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/9.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/10.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="item">
+					<img src="img/1.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/2.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/3.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/4.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/5.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/6.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/7.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/8.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/9.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/10.jpg"/>
+				</div>
+			</div>
+			<div class="box">
+				<div class="item">
+					<img src="img/1.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/2.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/3.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/4.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/5.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/6.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/7.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/8.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/9.jpg"/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="item">
+					<img src="img/10.jpg"/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

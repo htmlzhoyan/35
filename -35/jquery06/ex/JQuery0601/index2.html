@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.validate.js" ></script>
+		<script>
+			$(function() {
+				$("#myform").validate({
+					/* 验证规则*/
+					rules:{
+						un:{
+							required:true,
+							minlength:5,
+							maxlength:12
+						},
+						pwd:"required"
+					},
+					/* 出现错误以后的提示消息*/
+					messages:{
+						un:{
+							required:"账号必须填写",
+							minlength:"账号最小5位",
+							maxlength:"账号最多12位"
+						},
+						pwd:"密码必须输入"
+					}
+				
+				});
+			});
+		</script>
+		<style>
+			.error{color:red}
+		</style>
+	</head>
+	<body>
+		<form id="myform">
+			<!-- 账号必须填写，长度最小5位，最大12位 -->
+			账号：<input type="text" name="un" id="username" /><br />
+			密码：<input type="text" name="pwd" id="password" />
+			<input type="submit" id="btn" value="提交" />
+		</form>
+	</body>
+</html>

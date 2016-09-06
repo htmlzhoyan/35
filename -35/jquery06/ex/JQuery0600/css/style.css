@@ -1,0 +1,20 @@
+.container {
+  position: relative;
+  /* fluffy */
+  margin: 0 auto;
+  width: 98%;
+  /* end fluffy */
+}
+
+.box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 180px;
+	border-radius: 3px;
+	background-color: #EDEDED;
+	-webkit-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	border: 1px solid #ADADAD;
+}
